@@ -7,8 +7,8 @@
 HIRO hiro; // Declare an intance of HIRO.
 
 void setup() {
-  //hiro.trailblazerBegin();//Attach all motors to pins
   hiro.begin();
+  //hiro.genZeroBegin(); Uncomment this line and comment the line above if you are using H.I.R.O. Gen Zero Edition.
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
   neutralStance(hiro);
