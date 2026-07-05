@@ -1,22 +1,36 @@
+/*
+ * File Name: HIRO_Excercise.h
+ * Description: Library for containing the exercise motion choreography for H.I.R.O. Model TR-01-A  Unit by Takamori Robot
+ * Author: Joseph Casebeer, Takamori Robot
+ * Date Created: December 31st 2025.
+ * Website: https://www.takamorirobot.com
+ *
+ * Instructions: The main functions for each exercise are what you can use in your sketch.
+ * The supporting functions are used by the main functions and are not intended to be used in your sketch.
+ *
+ * Choreographed movements 
+ * 1. sideToSideWorm - Moves HIRO side to side in a worm like dance
+ * 2. sideToSideStretch - Moves HIRO stretches HIRO side to side
+ * 3. cabbagePatch - Moves HIRO in a cabbage patch dance
+ * 4. cabbagePatch2 - Moves HIRO in a cabbage patch dance
+ * 5. pushUps - Moves HIRO in a push up motion
+ */
+
 #include <HIRO.h>
 #include <HIRO_Functions.h>
 #include <HIRO_Excercise.h>
 #include <HIRO_Walk.h>
 
 /*
-HIRO Excercise Section 1 Sub 1: HIRO Stretch and Worm - Main Functions
-*/
-
-void sideToSideSetUp(HIRO &hiro, int speed)
-{
-    // Description: Moves the robot's legs to the side in prep for side to side worm or stretch
-    sideToSideSet_LFL_RBL(hiro, 2);
-    sideToSideSet_RFL_LBL(hiro, 2);
-}
+ * HIRO Excercise Section 1 Sub 1: HIRO Stretch and Worm - Main Functions
+ */
 
 void sideToSideWorm(HIRO &hiro, int speed)
 {
-    // Description: Moves HIRO side to side in a worm like dance
+    //@brief Moves HIRO side to side in a worm like dance
+    //@param hiro - The HIRO object to be used in the function
+    //@param speed - The speed at which the function will be executed. 1 is the slowest and 4 is the fastest.
+
     sideToSideSetUp(hiro, speed);
     for (int i = 0; i < 5; i++)
     {
@@ -27,7 +41,9 @@ void sideToSideWorm(HIRO &hiro, int speed)
 
 void sideToSideStretch(HIRO &hiro, int speed)
 {
-    // Description: Moves HIRO side to side like a stretchj
+    //@brief Moves HIRO stretches HIRO side to side
+    //@param hiro - The HIRO object to be used in the function
+    //@param speed - The speed at which the function will be executed. 1 is the slowest and 4 is the fastest.
     sideToSideSetUp(hiro, speed);
     for (int i = 0; i < 5; i++)
     {
@@ -37,8 +53,15 @@ void sideToSideStretch(HIRO &hiro, int speed)
 }
 
 /*
-HIRO Excercise Section 1 Sub 2: HIRO Stretch and Worm - Main Functions
-*/
+ * HIRO Excercise Section 1 Sub 2: HIRO Stretch and Worm - Main Functions
+ */
+
+void sideToSideSetUp(HIRO &hiro, int speed)
+{
+    // Description: Moves the robot's legs to the side in prep for side to side worm or stretch
+    sideToSideSet_LFL_RBL(hiro, 2);
+    sideToSideSet_RFL_LBL(hiro, 2);
+}
 
 void sideToSideSet_LFL_RBL(HIRO &hiro, int speed)
 {
@@ -197,11 +220,16 @@ void swayRight(HIRO &hiro, int speed)
 }
 
 /*
-HIRO Excercise Section 2 Sub 1: HIRO Cabbage Patch - Main Functions
-*/
+ *HIRO Excercise Section 2 Sub 1: HIRO Cabbage Patch - Main Functions
+ */
 
 void cabbagePatch(HIRO &hiro, int speed, int repetitions)
 {
+    //@brief Moves HIRO in a cabbage patch dance
+    //@param hiro - The HIRO object to be used in the function
+    //@param speed - The speed at which the function will be executed. 1 is the slowest and 4 is the fastest.
+    //@param repetitions - The number of times the cabbage patch movement will be repeated.
+
     for (int i = 0; i < repetitions; i++)
     {
         raiseLeftCabbagePatch(hiro, speed);
@@ -213,6 +241,10 @@ void cabbagePatch(HIRO &hiro, int speed, int repetitions)
 
 void cabbagePatch2(HIRO &hiro, int speed, int repetitions)
 {
+    //@brief Moves HIRO in a cabbage patch dance
+    //@param hiro - The HIRO object to be used in the function
+    //@param speed - The speed at which the function will be executed. 1 is the slowest and 4 is the fastest.
+    //@param repetitions - The number of times the cabbage patch movement will be repeated.
     for (int i = 0; i < repetitions; i++)
     {
         raiseLeftCabbagePatch2(hiro, speed);
@@ -221,8 +253,8 @@ void cabbagePatch2(HIRO &hiro, int speed, int repetitions)
 }
 
 /*
-HIRO Excercise Section 2 Sub 2: HIRO Cabbage Patch - Supporting Functions
-*/
+ * HIRO Excercise Section 2 Sub 2: HIRO Cabbage Patch - Supporting Functions
+ */
 void raiseLeftCabbagePatch(HIRO &hiro, int speed)
 {
     bool rfsb = false;
@@ -378,11 +410,16 @@ void raiseRightCabbagePatch2(HIRO &hiro, int speed)
 }
 
 /*
-HIRO Excercise Section 3 Sub 1: HIRO Push Ups - Main Functions
-*/
+ * HIRO Excercise Section 3 Sub 1: HIRO Push Ups - Main Functions
+ */
 
 void pushUps(HIRO &hiro, int speed, int repetitions)
 {
+    //@brief Moves HIRO in a push up motion
+    //@param hiro - The HIRO object to be used in the function
+    //@param speed - The speed at which the function will be executed. 1 is the slowest and 4 is the fastest.
+    //@param repetitions - The number of times the push up movement will be repeated.
+
     setPushUp(hiro, speed);
     for (int i = 0; i < repetitions; i++)
     {
@@ -392,8 +429,8 @@ void pushUps(HIRO &hiro, int speed, int repetitions)
 }
 
 /*
-HIRO Excercise Section 3 Sub 2: HIRO Push Ups - Supporting Functions
-*/
+ *HIRO Excercise Section 3 Sub 2: HIRO Push Ups - Supporting Functions
+ */
 
 void setPushUp(HIRO &hiro, int speed)
 {
