@@ -1,7 +1,11 @@
 /*
-HIRO_Motion.h by Joseph Casebeer
-This library along with coordinates the motion of multiple servos into choreographed motions
-*/
+ * File Name: HIRO_Functions.h
+ * Description: This library defines everything that 
+ * Author: Joseph Casebeer, Takamori Robot
+ * Date Created: December 31st 2025.
+ * Website: https://www.takamorirobot.com
+ */
+
 
 #ifndef HIRO_Functions_h
 #define HIRO_Functions_h

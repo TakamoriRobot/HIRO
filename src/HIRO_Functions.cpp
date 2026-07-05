@@ -1,9 +1,26 @@
+/*
+ * File Name: HIRO_Functions.cpp
+ * Description: This library defines everything that 
+ * Author: Joseph Casebeer, Takamori Robot
+ * Date Created: December 31st 2025.
+ * Website: https://www.takamorirobot.com
+ * 
+ * Instruction: Use move() for multiservo orchestration on a single thread. Use move to increment multiple servos in a loop givig the
+ * appearance of simultaneous motion. Use executeMove() to move a single servo to a target angle.
+ */
+
 #include <Arduino.h>
 #include <Servo.h>
 #include <HIRO.h>
 #include <HIRO_Functions.h>
 
-bool move(Servo &servo, int target, int increment){ //Increments the servo towards a target.
+bool move(Servo &servo, int target, int increment){ 
+  // @brief Increments the servo towards a target.
+  // @param Servo &servo: The servo to move.
+  // @param int target: The target angle.
+  // @param int increment: The amount to increment the servo by.
+  // @return bool: True if the servo has reached its target, false otherwise.
+
   bool isDone = false; //If the servo hasn't reached its location isDone is false. 
   int current = servo.read(); //reads the servo's current position.
   
@@ -41,7 +58,9 @@ bool move(Servo &servo, int target, int increment){ //Increments the servo towar
   }
 }
 
-void executeMove(Servo &servo, int target, int increment, int delayTime, int limit){ //Good code for moving one limb at a time.
+void executeMove(Servo &servo, int target, int increment, int delayTime, int limit){ 
+  //@brief uses move() for a single servo.
+  
   bool isDone = false;
   int counter = 0;
   while (!isDone && counter <= limit){
