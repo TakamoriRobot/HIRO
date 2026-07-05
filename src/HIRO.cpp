@@ -65,11 +65,24 @@ void HIRO::begin(){
   pinMode(this->green, OUTPUT);
   pinMode(this->blue, OUTPUT);
 }
+void HIRO::genZeroBegin(){
+  /*
+   *  @brief This method initializes H.I.R.O. to Generation Zero Motor Pinouts
+   */
+  this->customBegin(12, 13, 19, 19, 3, 2, 27, 28);
+}
+
 
 void HIRO::firstGenerationBegin()
-{ // This Method initializes H.I.R.O. to Trailblazer's Edition Motor Pinouts
-  this->customBegin(13, 12, 18, 19, 10, 11, 21, 20);
-  this->red = 7;
+{ 
+   /*
+  *@brief This method initializes H.I.R.O. (This is legacy code use begin() in future sketches) motor pinouts for both H.I.R.O. First Generation Edition  as of July 2026.
+  */
+  this->customBegin(13, 12, 18, 19, 10, 11, 21, 20); //Define motor pinouts.
+  /*
+   * Define pinouts and operation modes for the RGB LED and buttons on the H.I.R.O. Cortex PCB. 
+   */
+  this->red = 7; 
   this->green = 6;
   this->blue = 8;
   this->btnA = 1;
@@ -82,17 +95,14 @@ void HIRO::firstGenerationBegin()
 }
 
 
-/*void HIRO::firstGenerationBegin(){
-  this->customBegin(13, 12, 18, 19, 10, 11, 21, 20);
-}*/
 
-void HIRO::standardBegin()
-{ // This Method initializes H.I.R.O. to Standard Edition Default Motor Pinouts
-  this->customBegin(13, 12, 18, 19, 10, 11, 21, 20);
-}
+
 
 void HIRO::detachServos()
 {
+  /*
+   *  @brief This method detaches all servos on H.I.R.O.
+   */
   rfl.detach(); // Attach pin 13 to the right front leg
   rfs.detach(); // Attach pin 12 to the right front shoulder
   rbl.detach(); // Attach pin 11 to the right back leg

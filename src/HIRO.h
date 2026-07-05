@@ -39,10 +39,9 @@ public:
   //Pedometry
 
   HIRO();
-  void begin();                 // This Method initializes H.I.R.O. to Trailblazer's Edition Motor Pinouts
-  void genZeroBegin();          // This Method initializes H.I.R.O. to Trailblazer's Edition Motor Pinouts
-  void firstGenerationBegin();  // This Method initializes H.I.R.O. to FirstGeneration Edition Motor Pinouts
-  void standardBegin();         // This Method initializes H.I.R.O. to Standard Edition Default Motor Pinouts
+  void begin();                 // This Method initializes H.I.R.O. first Gen Edition and Standard Edition Motor Pinouts
+  void genZeroBegin();          // This Method initializes H.I.R.O. to Generation Zero Motor Pinouts
+  void firstGenerationBegin();  // This Method initializes H.I.R.O. to FirstGeneration Edition Motor Pinouts (Legacy Code Use begin() instead)
   void customBegin(int rflp, int rfsp, int lflp, int lfsp, int rblp, int rbsp, int lblp, int lbsp); // This method allows custom motor pinouts.
   void detachServos(); //Detach All Servos Servos
 
