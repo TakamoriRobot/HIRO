@@ -1,6 +1,6 @@
 /*
  * File Name: HIRO.h 
- * Description: Library for defining and controlling a H.I.R.O. Model TR-01-A  Unit by Takamori RObot
+ * Description: Library for defining and controlling a H.I.R.O. Model TR-01-A  Unit by Takamori Robot
  * Author: Joseph Casebeer, Takamori Robot
  * Date Created: December 31st 2025.
  * Website: https://www.takamorirobot.com
