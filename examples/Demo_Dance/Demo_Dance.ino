@@ -1,12 +1,12 @@
 #include <HIRO.h>
 #include <HIRO_Motion.h>
 #include <HIRO_Functions.h>
-#include <HIRO_Simple.h>
+#include <HIRO_Easy.h>
 
 HIRO hiro;
 
 void setup() {
-  hiro.firstGenerationBegin();
+  hiro.begin();
   neutralStance(hiro);
   digitalWrite(hiro.green, 1);
 }

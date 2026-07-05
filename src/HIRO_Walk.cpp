@@ -1,3 +1,15 @@
+/*
+ * File Name: HIRO_Walk.cpp
+ * Description: Library storing walking choreography for H.I.R.O. Model TR-01-A  Unit by Takamori Robot
+ * Author: Joseph Casebeer, Takamori Robot
+ * Date Created: December 31st 2025.
+ * Website: https://www.takamorirobot.com
+ * 
+ * Instructions: Use the main functions in your code to make H.I.R.O. walk forward, backward, and rotate clockwise and counterclockwise.
+ * The supporting functions are used by the main functions are not reccommended to be used in your code unless you are an advanced user 
+ * and understand how the supporting functions work.
+ */
+
 
 #include <HIRO.h>
 #include <HIRO_Functions.h>
@@ -6,8 +18,9 @@
 
 
 void neutralStance(HIRO &hiro){
-   hiro.rfs.attach(hiro.rfsp);
-   hiro.lbs.attach(hiro.lbsp);
+  //@brief This function sets H.I.R.O. to a neutral standing stance
+  // @param HIRO &hiro: H.I.R.O. object.
+ 
    bool rfsb = false; bool rflb = false; bool rbsb = false; bool rblb = false;bool lfsb = false; bool lflb = false; bool lbsb = false; bool lblb = false; 
    int counter = 0;
    while (!rfsb || !rflb  || !rblb  || !lflb || !lbsb || !lblb)
@@ -36,20 +49,24 @@ HIRO Walk Section 1 Sub 1: HIRO Forwards and Backwards Mobility - Main Functions
 */
 
 void walkForward(HIRO &hiro, int stance, int step, int stride, int speed, int trim){
-  //stance: beginning feet angle..
-  //step: leg angle change when taking a step.
-  //stride: shoulder angle change when taking a step.
-  //speed: leg speed. 
-  //Trim adjustment in the walk to adjust for any left or right varience
+  //@brief This function makes H.I.R.O. walk forward using a dynamic gait.
+  //@param HIRO &hiro: H.I.R.O. object.
+  //@param stance: beginning feet angle..
+  //@param step: leg angle change when taking a step.
+  //@param stride: shoulder angle change when taking a step.
+  //@param speed: leg speed.
+  //@param trim: Trim adjustment in the walk to adjust for any left or right variance
   rightStepForward(hiro, stance, step, stride, speed, trim);
   leftStepForward(hiro, stance, step, stride, speed, trim);
 }
 
 void walkBackward(HIRO &hiro, int stance, int step, int stride, int speed, int trim){
-  //stance: beginning feet angle..
-  //step: leg angle change when taking a step.
-  //stride: shoulder angle change when taking a step.
-  //speed: leg speed. 
+  //@brief This function makes H.I.R.O. walk backward using a dynamic gait.
+  //@param HIRO &hiro: H.I.R.O. object.
+  //@param stance: beginning feet angle..
+  //@param step: leg angle change when taking a step.
+  //@param stride: shoulder angle change when taking a step.
+  //@param speed: leg speed.
   rightStepBackward(hiro, stance, step, stride, speed, trim);
   leftStepBackward(hiro, stance, step, stride, speed, trim);
 }
@@ -179,6 +196,12 @@ HIRO Walk Section 2 Sub 1: HIRO Clockwise and Couterclockwise Mobility - Main Fu
 */
 
 void rotateCounterClockwise(HIRO &hiro, int stance, int step, int stride, int speed){
+  //@brief This function rotates H.I.R.O. counter clockwise using a dynamic gait.
+  //@param stance: beginning feet angle..
+  //@param step: leg angle change when taking a step.
+  //@param stride: shoulder angle change when taking a step.
+  //@param speed: leg speed.
+
   raise_RFL_LBL(hiro, step, speed);
   counterClockwiseTwist_RFL_LBL(hiro, stride, speed);
   lower_RFL_LBL(hiro, stance, speed);
@@ -188,6 +211,12 @@ void rotateCounterClockwise(HIRO &hiro, int stance, int step, int stride, int sp
 }
 
 void rotateClockwise(HIRO &hiro, int stance, int step, int stride, int speed){
+  //@brief This function rotates H.I.R.O. clockwise using a dynamic gait.
+  //@param stance: beginning feet angle..
+  //@param step: leg angle change when taking a step.
+  //@param stride: shoulder angle change when taking a step.
+  //@param speed: leg speed.
+
   raise_RFL_LBL(hiro, step, speed);
   counterClockwiseTwist_LFL_RBL(hiro, stride, speed);
   lower_RFL_LBL(hiro, stance, speed);

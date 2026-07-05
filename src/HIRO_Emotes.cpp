@@ -1,8 +1,18 @@
+
+
+
 #include <HIRO.h>
 #include <HIRO_Functions.h>
 #include <HIRO_Emotes.h>
 
-void wave(HIRO &hiro){ //Robot raises its arm, and waves
+
+/*
+ * HIRO Emotes Section 1 SubSection 1: HIRO Wave - Main Functions
+ */
+
+void wave(HIRO &hiro){ 
+  //@brief HIRO raises his right arm, counterbalances his leg and waves
+  //@param hiro - The HIRO object to perform the wave emote
   counterBalanceLeg(hiro, 2);
   raiseArmWave(hiro);
   pullRightArmBack(hiro);
@@ -16,8 +26,8 @@ void wave(HIRO &hiro){ //Robot raises its arm, and waves
 
 
 /*
-  Movements for wave();
-*/
+ * HIRO Emotes Section 1 SubSection 2: HIRO Wave - Supporting Functions
+ */
 
 void counterBalanceLeg(HIRO &hiro, int speed){ //Extends the left back leg back so the robot doesn't fall when it waves
   bool rfsb = false; bool rflb = false; bool rbsb = false; bool rblb = false;bool lfsb = false; bool lflb = false; bool lbsb = false; bool lblb = false; 

@@ -1,7 +1,10 @@
 /*
-  HIRO.h - Library for defining and controlling a H.I.R.O. Unit.
-  Created by Joseph Casebeer, December 31st 2025.
-*/
+ * File Name: HIRO.h 
+ * Description: Library for defining and controlling a H.I.R.O. Model TR-01-A  Unit by Takamori Robot
+ * Author: Joseph Casebeer, Takamori Robot
+ * Date Created: December 31st 2025.
+ * Website: https://www.takamorirobot.com
+ */
 
 #ifndef HIRO_h
 #define HIRO_h
@@ -36,12 +39,10 @@ public:
   //Pedometry
 
   HIRO();
-  void genZeroBegin();          // This Method initializes H.I.R.O. to Trailblazer's Edition Motor Pinouts
-  void firstGenerationBegin();  // This Method initializes H.I.R.O. to FirstGeneration Edition Motor Pinouts
-  void standardBegin();         // This Method initializes H.I.R.O. to Standard Edition Default Motor Pinouts
+  void begin();                 // This Method initializes H.I.R.O. first Gen Edition and Standard Edition Motor Pinouts
+  void genZeroBegin();          // This Method initializes H.I.R.O. to Generation Zero Motor Pinouts
+  void firstGenerationBegin();  // This Method initializes H.I.R.O. to FirstGeneration Edition Motor Pinouts (Legacy Code Use begin() instead)
   void customBegin(int rflp, int rfsp, int lflp, int lfsp, int rblp, int rbsp, int lblp, int lbsp); // This method allows custom motor pinouts.
-  void detachShoulders(); //Detach shoulder Servos
-  void reattachShoulders();
   void detachServos(); //Detach All Servos Servos
 
 private:
