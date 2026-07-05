@@ -1,8 +1,8 @@
-#ifndef HIRO_Simple_H
-#define HIRO_Simple_H
+#ifndef HIRO_Easy_H
+#define HIRO_Easy_H
 #include <HIRO.h>
 #include <HIRO_Motion.h>
-#include <HIRO_Simple.h>
+#include <HIRO_Easy.h>
 
 void easyForward(HIRO &hiro, int steps, int speed);
 

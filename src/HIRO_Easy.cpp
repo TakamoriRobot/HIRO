@@ -1,6 +1,6 @@
 #include <HIRO.h>
 #include <HIRO_Motion.h>
-#include <HIRO_Simple.h>
+#include <HIRO_Easy.h>
 
 void easyForward(HIRO &hiro, int steps, int speed){
     for(int i = 0; i < steps; i ++){
@@ -16,9 +16,7 @@ void easyBackward(HIRO &hiro, int steps, int speed){
 
 void easyClockwise(HIRO &hiro, int steps, int speed){
     for(int i = 0; i < steps; i ++){
-        for(int i =0; i < 2; i++){
           rotateClockwise(hiro,0, 60, 20, speed);
-        }
     }
 }
 
