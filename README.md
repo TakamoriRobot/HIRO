@@ -1,5 +1,6 @@
 # HIRO Movement Library
-This is the movement library for H.I.R.O. Model TR-01-A. an open source raspberry pi pico based robotics platform developed by Takamori Robot.
+This is the movement library for H.I.R.O. Model TR-01-A. an open source raspberry pi pico based robotics platform developed by Takamori Robot. You can check out H.I.R.O. and Takamori Robot
+at <a>https://www.takamorirobot.com</a>
 
 # Table of Contents
 
