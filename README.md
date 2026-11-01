@@ -32,7 +32,7 @@ your device. You can download Arduino IDE at  <a>https://www.arduino.cc/en/softw
 <h3>Step 3: In the preferences menu, in the dialog box labeled <I>Additional boards manager URLs </I>, paste the following URL and then click okay.</h3>
 
 ```
-https://github.com/earlephilhower/arduinopico/releases/download/global/package_rp2040_index.json
+https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 ```
 
 <img src=img/Raspberry_Pi_Pico_Integration/Step3.png width = 100%/>
